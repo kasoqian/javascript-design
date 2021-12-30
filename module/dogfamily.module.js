@@ -1,12 +1,17 @@
 const DogFamily = (function () {
   let dogs = []
+
+  const getAllDog = function () {
+    return dogs
+  }
+
+  const addDog = function (dogeName) {
+    dogs.push(dogeName)
+  }
+
   return {
-    addDog(dogeName) {
-      dogs.push(dogeName)
-    },
-    getAllDog() {
-      return dogs
-    },
+    addDog,
+    getAllDog,
   }
 })()
 
