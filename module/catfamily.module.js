@@ -1,6 +1,5 @@
 function CatFamily() {
   let cats = []
-  console.log('I am working!')
 
   let delFirstCat = function () {
     cats.pop()
@@ -8,12 +7,11 @@ function CatFamily() {
 
   let addCat = function (catName) {
     let hasCat = false
-    catName.length == 0 ? cats.push(catName) : null
 
+    catName.length == 0 ? cats.push(catName) : null
     cats.forEach((cat) => {
       cat == catName ? (hasCat = true) : null
     })
-
     hasCat == false ? cats.push(catName) : null
   }
 
@@ -23,6 +21,8 @@ function CatFamily() {
       delFirstCat,
     }
   }
+
+  console.log('I am working!')
 
   return {
     addCat,
